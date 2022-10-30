@@ -1,3 +1,14 @@
+/* animations */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 :root {
   --heading-color: rgb(13, 75, 13);
   --font-color: #000;
@@ -54,18 +65,12 @@ header h1 {
 
 /* main */
 
-/* character selection */
-.charactersSection {
+/* player form */
+.playerForm {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.characterContainer {
-  height: 25rem;
-  width: 15rem;
-  background-color: aquamarine;
+  flex-direction: column;
 }
 
 /* first riddle */
@@ -91,4 +96,8 @@ header h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.startGame {
+  animation: fadeIn 0.5s ease-in;
 }
