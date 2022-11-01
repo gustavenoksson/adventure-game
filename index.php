@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 require __DIR__ . "/php/header.php";
 require __DIR__ . "/php/functions.php";
 require __DIR__ . "/php/arrays.php";
@@ -18,15 +16,16 @@ require __DIR__ . "/php/arrays.php";
 
         <form method="post" action="/php/chapterone.php" class="playerForm">
             <label for="playerName">Please type in your name: </label>
-            <input type="text" name="playerName"> 
+            <input type="text" name="playerName">
+            <button type="submit">Select Name</button>
         </form>
 
-        <?php if(isset($_POST["playerName"])):
+        <?php
+        if(isset($_POST["playerName"])):
 
-        $playerName = $_POST["playerName"];
+        $_SESSION["playerName"] = $_POST["playerName"];
 
-        endif;
-        ?>
+        endif; ?>
         
         </section>
     </main>

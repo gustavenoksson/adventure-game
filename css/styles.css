@@ -21,13 +21,14 @@
 }
 
 body {
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
   font-size: 16px;
   font-family: 'Amatic SC', cursive;
   font-weight: 400;
   background-color: rgb(35, 35, 54);
   color: var(--font-color);
+  position: relative;
 }
 
 h1 {
@@ -35,12 +36,12 @@ h1 {
 }
 
 h2 {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 800;
 }
 
 h3 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 800;
 }
 
@@ -48,6 +49,18 @@ p {
   font-size: 24px;
   font-weight: 400;
 }
+
+button {
+  font-family: 'Amatic SC', cursive;
+  font-size: 2rem;
+  padding: 0.2rem;
+}
+
+button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 /* header */
 
 header {
@@ -79,15 +92,25 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 3rem;
+  gap: 1.5rem;
 }
 
-/* first riddle */
+.playerForm label {
+  font-size: 3rem;
+}
+
+.playerForm input {
+  width: 10rem;
+  height: 1.5rem;
+}
+
+/* chapter 1 */
 .riddleContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  padding-top: 7rem;
 }
 
 .riddleTextBox {
@@ -98,11 +121,45 @@ main {
   gap: 1.5rem;
 }
 
-/* chapter 1 */
+.riddleTextBox a {
+  text-decoration: none;
+  color: white;
+  font-size: 3rem;
+}
+
+.riddleWord {
+  font-size: 4rem;
+}
 
 .answerForm {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.answerForm label {
+  font-size: 2rem;
+}
+
+.answerForm button {
+  transform: scale(0.7);
+}
+
+.answerForm button:hover {
+  transform: scale(0.8);
+}
+
+/* footer */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  font-size: 16px;
 }

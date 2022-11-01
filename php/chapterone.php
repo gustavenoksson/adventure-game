@@ -4,31 +4,34 @@ require __DIR__ . "/header.php";
 require __DIR__ . "/functions.php";
 require __DIR__ . "/arrays.php";
 
-?> <h3> <?php echo $chapters[0]["title"], $chapters[0]["story"]; ?> </h3>
+?>
 
 <body>
     <main>
         <article class="riddleContainer">
             <div class="riddleTextBox">
-                
-                <h2> <?= randomizeArray($riddleWords); ?> </h2>
+
+                <h1> <?= $chapters[0]["title"] ?> </h1> <h2> <?=  $chapters[0]["story"]; ?> </h2>
+
+                <h2 class="riddleWord"> <?= randomizeArray($riddleWords); ?> </h2>
 
                 <form method="post" action="chapterone.php" class="answerForm">
-                    <label for="answer">Answer: </label>
+                    <label for="answer">Answer:</label>
                     <input type="text" name="answer" autocomplete="off">
+                    <button type="submit">Try answer</button>
                 </form>
 
                 <?php if (isset($_POST["answer"])):
 
                 $riddleAnswerInput = $_POST["answer"];
-                $riddleAnswer = implode($riddleWord);
-                $_SESSION["answer"] = $riddleAnswer;
 
-                    if ($riddleAnswerInput === $_SESSION["answer"]) {
-                        echo "Right answer!";
-                    } else
-                        echo "Try again!";
+                    if (in_array($riddleAnswerInput, $riddleWords)){
+                        ?> <h3><a href="/php/chaptertwo.php">The door opens, click here to step inside</a></h3> <?php
+                    } else {
+                        ?> <h3>Wrong answer, looks like the letters on the door moved!</h3> <?php
+                    }
                     endif; ?>
+
             </div>
         </article>
     </main>

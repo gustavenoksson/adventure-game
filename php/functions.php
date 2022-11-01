@@ -2,23 +2,17 @@
 
 declare(strict_types=1);
 
+session_start();
+
 require __DIR__ . "/arrays.php";
 
 // Function to randomize a word from the $riddleWords array by randomizing the index number of the array
 function randomizeArray(array $array){
 
     shuffle($array);
-    $randomizeWords = $array[0];
+    $randomWord = $array[0];
 
-    $shuffleString = str_shuffle($randomizeWords);
-    $_SESSION["riddleWord"] = $shuffleString;
+    $shuffleString = str_shuffle($randomWord);
 
-    global $riddleWord;
-    array_push($riddleWord, $randomizeWords);
-    
-
-    if(isset($_SESSION["riddleWord"])){
-        return $_SESSION["riddleWord"];
-    }
+    return $shuffleString;
 };
-
