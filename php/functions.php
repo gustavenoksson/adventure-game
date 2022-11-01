@@ -21,3 +21,4 @@ function randomizeArray(array $array){
         return $_SESSION["riddleWord"];
     }
 };
+
