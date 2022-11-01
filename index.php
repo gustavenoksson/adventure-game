@@ -1,44 +1,37 @@
 <?php
 
-require __DIR__ . "/php/functions.php";
+session_start();
+
 require __DIR__ . "/php/header.php";
+require __DIR__ . "/php/functions.php";
 require __DIR__ . "/php/arrays.php";
-
-if (isset($_POST["playerName"])) {
-
-    $player = $_POST["playerName"];
-
-    echo $chapters [0]["title"];
-    };
-
-if (isset($_POST["answer"])) {
-
-    $riddleAnswerInput = $_POST["answer"];
-    $riddleAnswer = implode($riddleWord);
-
-    if ($riddleAnswerInput === $riddleAnswer) {
-        echo "Right answer!";
-    } else
-        echo "Try again!";
-    };
-
-
 
 ?>
 
 <body>
-
     <header>
         <h1>Horror House</h1>
     </header>
 
     <main>
+        <section class="playerInputSection">
 
-        <section class="charactersSection">
         <form method="post" action="index.php" class="playerForm">
             <label for="playerName">Please type in your name: </label>
             <input type="text" name="playerName"> 
         </form>
+
+        <?php if(isset($_POST["playerName"])):
+
+        $player = $_POST["playerName"];
+
+        $_SESSION["chapterOneTitle"] = $chapters[0]["title"];
+        $_SESSION["chapterOneStory"] = $chapters[0]["story"];
+        
+
+        ?> <h3> <?php echo $_SESSION["chapterOneTitle"], $_SESSION["chapterOneStory"] ?> </h3> <?php
+        endif; ?>
+    
         </section>
 
         <article class="riddleContainer">
@@ -46,13 +39,27 @@ if (isset($_POST["answer"])) {
                 
                 <h2> <?= randomizeArray($riddleWords); ?> </h2>
 
-                <form method="post" class="answerForm">
+                <form method="post" action="index.php" class="answerForm">
                     <label for="answer">Answer: </label>
                     <input type="text" name="answer" autocomplete="off">
                 </form>
+
+                <?php if (isset($_POST["answer"])):
+
+                $riddleAnswerInput = $_POST["answer"];
+                $riddleAnswer = implode($riddleWord);
+                $_SESSION["answer"] = $riddleAnswer;
+
+                    if ($riddleAnswerInput === $_SESSION["answer"]) {
+                        echo "Right answer!";
+                    } else
+                        echo "Try again!";
+                    endif; ?>
+
             </div>
         </article>
     </main>
-</body>
-
-</html>
+    
+    <?php
+    require __DIR__ . "/php/footer.php";
+    ?>

@@ -62,6 +62,16 @@ header h1 {
 }
 
 /* main */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.playerInputSection {
+  width: 80%;
+}
 
 /* player form */
 .playerForm {
@@ -69,6 +79,7 @@ header h1 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 3rem;
 }
 
 /* first riddle */
