@@ -7,6 +7,8 @@ require __DIR__ . "/arrays.php";
 ?>
 
 <body>
+    <header>
+    </header>
     <main>
         <article class="riddleContainer">
             <div class="riddleTextBox">

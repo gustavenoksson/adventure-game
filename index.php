@@ -19,11 +19,6 @@ require __DIR__ . "/php/arrays.php";
             <input type="text" name="playerName">
             <button type="submit">Select Name</button>
         </form>
-
-        <?php
-
-        if(isset($_POST["playerName"])):
-        endif; ?>
         
         </section>
     </main>

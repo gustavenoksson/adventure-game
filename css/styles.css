@@ -159,8 +159,30 @@ main {
   gap: 3rem;
 }
 
-.imagesContainer img:hover {
+.imageContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgTextContainer {
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.imgText {
+  font-size: 40px;
+  font-family: 'Creepster', cursive;
+  color: red;
+  font-weight: bold;
+}
+
+.imageContainer:hover .imgTextContainer {
   transform: scale(1.1);
+  transition: 0.5s ease-in;
+  visibility: visible;
 }
 
 /* footer */
