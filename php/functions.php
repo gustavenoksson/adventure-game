@@ -16,3 +16,13 @@ function randomizeArray(array $array){
 
     return $shuffleString;
 };
+
+function addNumber(int $numOne, int $numTwo, int $numThree){
+    $result = $numOne + $numTwo + $numThree;
+    
+if (isset($_POST["answerRiddleTwo"])) {
+    if ($_POST["answerRiddleTwo"] == $result){
+        return "Right Answer!";
+    } else return "Wrong answer!";
+}
+}  

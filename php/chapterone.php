@@ -11,25 +11,26 @@ require __DIR__ . "/arrays.php";
         <article class="riddleContainer">
             <div class="riddleTextBox">
 
-                <h1> <?= $chapters[0]["title"] ?> </h1> <h2> <?=  $chapters[0]["story"]; ?> </h2>
+                <h1 class="chapter"> <?= $chapters[0]["title"] ?> </h1> <h2 class="chapter"> <?=  $chapters[0]["story"]; ?> </h2>
 
                 <h2 class="riddleWord"> <?= randomizeArray($riddleWords); ?> </h2>
 
                 <form method="post" action="chapterone.php" class="answerForm">
                     <label for="answer">Answer:</label>
-                    <input type="text" name="answer" autocomplete="off">
+                    <input type="text" name="answerRiddleOne" autocomplete="off">
                     <button type="submit">Try answer</button>
                 </form>
 
-                <?php if (isset($_POST["answer"])):
+                <?php if (isset($_POST["answerRiddleOne"])):
 
-                $riddleAnswerInput = $_POST["answer"];
+                $riddleAnswerInput = $_POST["answerRiddleOne"];
 
                     if (in_array($riddleAnswerInput, $riddleWords)){
                         ?> <h3><a href="/php/chaptertwo.php">The door opens, click here to step inside</a></h3> <?php
                     } else {
                         ?> <h3>Wrong answer, looks like the letters on the door moved!</h3> <?php
                     }
+
                     endif; ?>
 
             </div>

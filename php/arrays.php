@@ -9,7 +9,8 @@ $riddleWords = [
     "Haunted",
     "Spooky",
     "Terror",
-    "Knife"
+    "Knife",
+    "Horror"
 ];
 
 // Array of the story with chapter titles
@@ -18,5 +19,9 @@ $chapters = [
     "story" => " After a long walk trough the woods at night pondered upon a house. It seems rundown and very old. The planks underneath creek as make it to the door. After some inspection noticed that the door does not have a keyhole but instead a puzzle on it. Can find the word to get into the house?"],
 
     ["title" => "Chapter 2 - The House",
-    "story" => "As you make it into the house you "]
+    "story" => "As you make it into the house you are treated with a horrible smell and cobwebs that get into your face. After some exploring you notice a table with 3 pictures on it."]
 ];
+
+$images = ["/images/circle-meeting.png",
+"/images/skeleton-picture.jpeg",
+"/images/floating-instrument.png"];

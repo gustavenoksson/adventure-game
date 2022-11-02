@@ -21,10 +21,8 @@ require __DIR__ . "/php/arrays.php";
         </form>
 
         <?php
+
         if(isset($_POST["playerName"])):
-
-        $_SESSION["playerName"] = $_POST["playerName"];
-
         endif; ?>
         
         </section>
