@@ -10,7 +10,7 @@
 }
 
 :root {
-  --heading-color: rgb(13, 75, 13);
+  --hover-color: rgb(167, 255, 167);
   --font-color: rgb(255, 255, 255);
 }
 
@@ -74,7 +74,16 @@ header h1 {
   padding-bottom: 3rem;
 }
 
-/* main */
+a {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--hover-color);
+}
+
+/* index.php */
 main {
   display: flex;
   justify-content: center;
@@ -83,26 +92,11 @@ main {
 }
 
 .playerInputSection {
-  width: 80%;
-}
-
-/* player form */
-.playerForm {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 1.5rem;
-  animation: fadeIn 0.5s ease-in;
-}
-
-.playerForm label {
-  font-size: 3rem;
-}
-
-.playerForm input {
-  width: 10rem;
-  height: 1.5rem;
+  width: 80%;
 }
 
 /* chapter 1 */
@@ -122,12 +116,6 @@ main {
   align-items: center;
   gap: 1.5rem;
   padding-bottom: 5rem;
-}
-
-.riddleTextBox a {
-  text-decoration: none;
-  color: white;
-  font-size: 3rem;
 }
 
 .riddleWord {
@@ -151,6 +139,10 @@ main {
 
 .answerForm button:hover {
   transform: scale(0.8);
+}
+
+.skipChapter a {
+  font-size: 30px;
 }
 
 /* chapter 2 */

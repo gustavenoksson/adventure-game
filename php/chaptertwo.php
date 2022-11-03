@@ -15,7 +15,8 @@ require "arrays.php";
                 
             <h1 class="chapter"> <?= $chapters[1]["title"] ?> </h1> <h2 class="chapter"> <?= $chapters[1]["story"]; ?> </h2>
 
-                <h2> <?php echo addNumbers(8, 10, 2); ?> </h2>
+                <!-- Echo function addNumber to, linked to form below -->
+                <h2> <?=  addNumbers(8, 10, 2); ?> </h2>
 
                 <form method="post" action="chaptertwo.php" class="answerForm">
                     <label for="answerRiddleTwo">Answer:</label>
@@ -35,7 +36,7 @@ require "arrays.php";
                     
                     endforeach; ?>
                 </div>
-
+                <p class="skipChapter"><a href="chapterthree.php">Skip to Chapter 3</a></p>
             </div>
         </article>
     </main>

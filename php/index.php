@@ -14,11 +14,8 @@ require "arrays.php";
     <main>
         <section class="playerInputSection">
 
-        <form method="post" action="chapterone.php" class="playerForm">
-            <label for="playerName">Please type in your name: </label>
-            <input type="text" name="playerName">
-            <button type="submit">Select Name</button>
-        </form>
+            <h1>Welcome to the horror house!</h1>
+            <h2 class="startGameText"><a href="chapterone.php">Start Game</a></h2>
         
         </section>
     </main>

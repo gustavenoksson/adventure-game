@@ -21,16 +21,7 @@ function addNumbers(int $numOne, int $numTwo, int $numThree){
     
     if (isset($_POST["answerRiddleTwo"])) {
         if ($_POST["answerRiddleTwo"] == $result){
-            return "You are right and you managed to escape the house!";
+            ?> <h2><a href="chapterthree.php">Thats right! Click here to open the door</a></h2> <?php
         } else return "Wrong answer!";
     }
-}
-
-// Returns the name of the player
-function congratulatePlayer() {
-
-    if(isset($_POST["playerName"])) {
-        $playerName = $_POST["playerName"];
-        echo $playerName;
-    }
-}
+};
