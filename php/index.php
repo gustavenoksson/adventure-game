@@ -1,8 +1,8 @@
 <?php
 
-require __DIR__ . "/php/header.php";
-require __DIR__ . "/php/functions.php";
-require __DIR__ . "/php/arrays.php";
+require "header.php";
+require "functions.php";
+require "arrays.php";
 
 ?>
 
@@ -14,7 +14,7 @@ require __DIR__ . "/php/arrays.php";
     <main>
         <section class="playerInputSection">
 
-        <form method="post" action="/php/chapterone.php" class="playerForm">
+        <form method="post" action="chapterone.php" class="playerForm">
             <label for="playerName">Please type in your name: </label>
             <input type="text" name="playerName">
             <button type="submit">Select Name</button>
@@ -23,4 +23,4 @@ require __DIR__ . "/php/arrays.php";
         </section>
     </main>
 
-    <?php require __DIR__ . "/php/footer.php"; ?>
+    <?php require "footer.php"; ?>

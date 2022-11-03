@@ -1,8 +1,8 @@
 <?php
 
-require __DIR__ . "/header.php";
-require __DIR__ . "/functions.php";
-require __DIR__ . "/arrays.php";
+require "header.php";
+require "functions.php";
+require "arrays.php";
 
 ?>
 
@@ -41,4 +41,4 @@ require __DIR__ . "/arrays.php";
     </main>
 </body>
 
-<?php require __DIR__ . "/footer.php"; ?>
+<?php require "footer.php"; ?>

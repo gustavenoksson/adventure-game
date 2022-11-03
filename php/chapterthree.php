@@ -1,8 +1,8 @@
 <?php
 
-require __DIR__ . "/header.php";
-require __DIR__ . "/functions.php";
-require __DIR__ . "/arrays.php";
+require "header.php";
+require "functions.php";
+require "arrays.php";
 
 ?>
 
@@ -10,7 +10,19 @@ require __DIR__ . "/arrays.php";
     <header>
     </header>
     <main>
+
+    <article class="riddleContainer">
+        <div class="riddleTextBox">
+
+        <h1 class="chapter"> <?= $chapters[2]["title"] ?> </h1> <h2 class="chapter"> <?= $chapters[2]["story"]; ?> </h2>
+
+        <h3><a href="../index.php">Return to start</a></h3>
+        <a href=""></a>
+
+        </div>
+    </article>
+
     </main>
 </body>
 
-<?php require __DIR__ . "/footer.php"; ?>
+<?php require "footer.php"; ?>

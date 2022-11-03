@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-session_start();
-
-require __DIR__ . "/arrays.php";
+require "arrays.php";
 
 // Function to randomize a word from the $riddleWords array by randomizing the index number of the array
 function randomizeArray(array $array){
@@ -23,7 +21,7 @@ function addNumbers(int $numOne, int $numTwo, int $numThree){
     
     if (isset($_POST["answerRiddleTwo"])) {
         if ($_POST["answerRiddleTwo"] == $result){
-            return header('Location: chapterthree.php');
+            return "You are right and you managed to escape the house!";
         } else return "Wrong answer!";
     }
 }

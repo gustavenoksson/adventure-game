@@ -1,8 +1,8 @@
 <?php
 
-require __DIR__ . "/header.php";
-require __DIR__ . "/functions.php";
-require __DIR__ . "/arrays.php";
+require "header.php";
+require "functions.php";
+require "arrays.php";
 
 ?>
 
@@ -28,7 +28,7 @@ require __DIR__ . "/arrays.php";
                 $riddleAnswerInput = $_POST["answerRiddleOne"];
 
                     if (in_array($riddleAnswerInput, $riddleWords)){
-                        ?> <h3><a href="/php/chaptertwo.php">The door opens, click here to step inside</a></h3> <?php
+                        ?> <h3><a href="chaptertwo.php">The door opens, click here to step inside</a></h3> <?php
                     } else {
                         ?> <h3>Wrong answer, looks like the letters on the door moved!</h3> <?php
                     }
@@ -39,4 +39,4 @@ require __DIR__ . "/arrays.php";
         </article>
     </main>
 
-<?php require __DIR__ . "/footer.php"; ?>
+<?php require "footer.php"; ?>
