@@ -1,12 +1,16 @@
-INSERT MANDATORY GIF
-
-# Project Title
+# Horror House
 
 Text about the project and why it exists. This would also be a great place to link the project on One.com.
 
+This project is an adventure game where the user has to solve riddles to make it to the end. The project was inspired by halloween and is therefore in a spooky setting.
+
+Website: https://gusweb.se/adventure-game/php/index.php
+
 # Installation
 
-Add the installation instructions.
+1. Clone this repository to your computer.
+2. Open cloned folder in Visual Studio Code and start localhost.
+3. To acess index.php add /php/ after localhost (http://localhost:8000/php/index.php).
 
 # Code Review
 
@@ -22,5 +26,5 @@ Code review written by [Adam Garali](https://github.com/Adishumla).
 
 Tested by the following people:
 
-1. Jane Doe
-2. John Doe
+1. Emma Hedlund
+2. Tobias Åhlund
