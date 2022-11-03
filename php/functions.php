@@ -25,3 +25,16 @@ function addNumbers(int $numOne, int $numTwo, int $numThree){
         } else return "Wrong answer!";
     }
 };
+
+// Check if string is in array with invariant string comparison.
+function isStringInArray($array, $input){
+
+    foreach($array as $value) {
+
+        if(strtoupper($input) === strtoupper($value)) {
+            return true;
+        }
+    }
+
+    return false;
+}

@@ -24,15 +24,16 @@ require "arrays.php";
                 </form>
 
                 <!-- If statement that returns true if the word the use types in the form is a string from riddleWords array -->
-                <?php if (isset($_POST["answerRiddleOne"])):
+                <?php if (isset($_POST["answerRiddleOne"])){
 
                 $riddleAnswerInput = $_POST["answerRiddleOne"];
-                    if (in_array($riddleAnswerInput, $riddleWords)){
+
+                    if (isStringInArray($riddleWords, $riddleAnswerInput)){
                         ?> <h3><a href="chaptertwo.php">The door opens, click here to step inside</a></h3> <?php
                     } else {
                         ?> <h3>Wrong answer, looks like the letters on the door moved!</h3> <?php
                     }
-                    endif; ?>
+                } ?>
 
                 <p class="skipChapter"><a href="chaptertwo.php">Skip to chapter 2</a></p>
 
