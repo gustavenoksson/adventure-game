@@ -1,5 +1,3 @@
-https://media0.giphy.com/media/IRZE8JX2BQikM/giphy.gif?cid=ecf05e47pdm1h0k6ohlohoerl9o1j78alvl88656suf9cdni&rid=giphy.gif&ct=g
-
 # Horror House
 
 Text about the project and why it exists. This would also be a great place to link the project on One.com.
